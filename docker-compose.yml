@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  neo4j:
+    image: neo4j:5.12.0
+    container_name: asgard-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD}
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - ./data/neo4j/data:/data
+      - ./data/neo4j/logs:/logs
+      - ./data/neo4j/import:/import
+      - ./data/neo4j/plugins:/plugins
+    restart: unless-stopped
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: asgard-chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data/chromadb:/chroma/chroma
+    restart: unless-stopped
+
+  # chassis:
+  #   build: ./chassis
+  #   container_name: asgard-chassis
+  #   ports:
+  #     - "8080:8080"
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - neo4j
+  #     - chromadb
+  #   restart: unless-stopped

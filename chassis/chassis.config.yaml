@@ -1,0 +1,40 @@
+# chassis.config.yaml
+# Configuración de comportamiento del chassis.
+# NO contiene secretos — para secretos, usar .env
+
+instance:
+  type: personal           # personal | enterprise
+  user_id: "default-user"
+  language: "es"
+
+observers:
+  enabled:
+    - technical
+    - empathic
+    - humor
+    - social
+  aggressiveness:
+    technical: 0.7
+    empathic: 0.5
+    humor: 0.3
+    social: 0.4
+
+embeddings:
+  provider: openai           # openai | ollama
+  model: text-embedding-3-small
+  dimensions: 1536
+
+consolidation:
+  schedule_cron: "0 3 * * *"  # 3am diario
+  min_events_to_consolidate: 5
+
+mcp:
+  enabled: true
+  transport: stdio           # stdio | sse
+  server_name: "superagent-chassis"
+  server_version: "0.1.0"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false

@@ -1,0 +1,7 @@
+pyyaml>=6.0
+aiosqlite
+pytest-asyncio
+openai>=1.0.0
+fastapi
+uvicorn
+httpx

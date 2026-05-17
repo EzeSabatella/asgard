@@ -1,0 +1,28 @@
+[project]
+name = "superagente-chassis"
+version = "0.1.0"
+description = "The core identity chassis for the SuperAgente project."
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "pydantic-settings",
+    "langgraph",
+    "langchain-openai",
+    "chromadb",
+    "neo4j",
+    "sqlcipher3-wheels",
+    "pytest",
+    "httpx",
+    "pyyaml>=6.0",
+    "aiosqlite",
+    "pytest-asyncio",
+    "openai>=1.0.0"
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

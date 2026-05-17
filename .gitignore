@@ -1,0 +1,58 @@
+# Entorno Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Secretos y credenciales
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Cobertura de tests
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docker
+*.override.yml
+
+# Logs
+*.log
+logs/
+
+# Antigravity IDE
+.antigravity/
+
+# Documentos de presentación (emergen del contexto, no lo definen)
+*.docx
+*.pptx
+*.xlsx
+*.pdf
