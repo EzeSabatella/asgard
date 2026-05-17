@@ -20,9 +20,14 @@ observers:
     social: 0.4
 
 embeddings:
-  provider: openai           # openai | ollama
-  model: text-embedding-3-small
-  dimensions: 1536
+  provider: ollama           # openai | ollama
+  model: nomic-embed-text
+  dimensions: 768
+
+llm:
+  provider: deepseek         # deepseek | openai
+  model: deepseek-chat
+  temperature: 0.1
 
 consolidation:
   schedule_cron: "0 3 * * *"  # 3am diario

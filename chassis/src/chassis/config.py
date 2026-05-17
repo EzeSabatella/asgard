@@ -18,6 +18,11 @@ class EmbeddingsConfig(BaseModel):
     model: str
     dimensions: int
 
+class LLMConfig(BaseModel):
+    provider: Literal["deepseek", "openai"]
+    model: str
+    temperature: float = 0.1
+
 class ConsolidationConfig(BaseModel):
     schedule_cron: str
     min_events_to_consolidate: int = 5
@@ -37,6 +42,7 @@ class ChassisConfig(BaseModel):
     instance: InstanceConfig
     observers: ObserversConfig
     embeddings: EmbeddingsConfig
+    llm: LLMConfig
     consolidation: ConsolidationConfig
     mcp: McpConfig
     api: ApiConfig
