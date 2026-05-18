@@ -6,7 +6,7 @@ _Última actualización: 2026-05-17_
 
 ## En progreso
 
-- [ ] Levantar chassis FastAPI en servidor `antigravity` (Dockerfile o Python directo)
+- [ ] Levantar chassis FastAPI en servidor `antigravity` (Dockerfile + docker-compose.yml)
 
 ---
 
@@ -29,10 +29,17 @@ _Última actualización: 2026-05-17_
 
 - [ ] Spec MCP bidireccional (input `ConversationTurn` + output `ContextResponse`)
 
+### Fase 1-2 — Handoff / Session Context
+
+- [ ] Spec de Session Context export (paquete de contexto portable para inyectar en cualquier LLM)
+- [ ] Endpoint o CLI: `asgard handoff --project X --to claude|gemini|chatgpt`
+
 ---
 
 ## Backlog (Fase 2+)
 
+- [ ] Identity Layer del asistente (Odín) — nombre, tono, propósito, reglas; separado del perfil del usuario
+- [ ] CLI `asgard context / handoff / list-projects` (primera interfaz de salida del sistema)
 - [ ] `SystemObserver` (base)
 - [ ] Völundr — detección de gaps y generación de skill proposals
 - [ ] Embeddings Ollama (switch de config, sin cambio de código)
@@ -42,6 +49,7 @@ _Última actualización: 2026-05-17_
 - [ ] Sistema de decay temporal de perfil
 - [ ] Contradiction detection en consolidador
 - [ ] Periodic review proposals al usuario
+- [ ] Model Router — rutear a Claude / Gemini / ChatGPT / modelo local según tipo de tarea (Fase 3)
 
 ---
 
