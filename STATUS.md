@@ -29,19 +29,19 @@ _Última actualización: 2026-05-17_
 
 ## En progreso
 
-- Setup de infraestructura de deploy:
-  - [ ] Instalar Git en la laptop
-  - [ ] Crear repo `asgard` en GitHub (privado)
-  - [ ] `git init` + primer commit
-  - [ ] `git push`
-  - [ ] `git clone` en el servidor `antigravity` (192.168.1.43)
-  - [ ] `docker compose up -d` en el servidor
+- Chassis FastAPI: pendiente de containerizar o correr con Python directamente en el servidor
 
 ---
 
-## Bloqueado
+## Infraestructura de deploy ✅ (2026-05-17)
 
-- Deploy en servidor — bloqueado hasta completar el setup de Git/GitHub
+- [x] Git instalado en laptop
+- [x] Repo `asgard` en GitHub: https://github.com/EzeSabatella/asgard
+- [x] `git init` + primer commit + `git push`
+- [x] `git clone` en servidor `antigravity` (192.168.1.40)
+- [x] `docker compose up -d` — Neo4j + ChromaDB corriendo
+- [x] Ollama operativo: `nomic-embed-text` + `llama3.2:3b`
+- [x] Proveedores actualizados: Ollama embeddings + DeepSeek LLM (28/28 tests)
 
 ---
 
