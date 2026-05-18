@@ -19,9 +19,12 @@ Más detalle: [SUPERAGENT.md](SUPERAGENT.md)
 
 ## Estado actual
 
-**Fase 0 completada.** El MVP está funcional con 22/22 tests pasando.
+**Fase 0 completada + infraestructura deployada.** 28/28 tests pasando.
 
-El paso inmediato es infraestructura de deploy: Git + GitHub + primer push + clone en servidor.
+- Repo en GitHub: https://github.com/EzeSabatella/asgard
+- Servidor `antigravity` (192.168.1.40): Neo4j + ChromaDB + Ollama corriendo
+- Proveedores actualizados: Ollama embeddings (local) + DeepSeek V3 (API)
+- Pendiente: levantar el chassis FastAPI en el servidor
 
 Ver estado detallado: [STATUS.md](STATUS.md)
 
@@ -79,11 +82,11 @@ Workflow detallado: [CLAUDE.md](CLAUDE.md) — sección "Workflow estándar".
 
 ## Próxima tarea concreta
 
-1. Instalar Git en la laptop
-2. Crear repo privado `asgard` en GitHub (cuenta: eze.datascientist@gmail.com)
-3. `git config --global user.name "Ezequiel Sabatella"`
-4. `git config --global user.email "eze.datascientist@gmail.com"`
-5. `git init` + `git add .` + primer commit + `git remote add origin <url>` + `git push`
+Levantar el chassis FastAPI en el servidor `antigravity`:
+- Opción A: Dockerfile + agregar servicio `chassis` al `docker-compose.yml`
+- Opción B: instalar Python + dependencias en el servidor y correr directamente
+
+Decisión pendiente: ¿Docker o Python directo? (escalar a Ezequiel)
 
 ---
 

@@ -6,7 +6,7 @@ _Última actualización: 2026-05-17_
 
 ## En progreso
 
-- [ ] Setup Git + GitHub + primer deploy en servidor `antigravity`
+- [ ] Levantar chassis FastAPI en servidor `antigravity` (Dockerfile o Python directo)
 
 ---
 
